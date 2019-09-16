@@ -1,17 +1,16 @@
 package yahtzee;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
 class MiniYahtzee {
 
-    public static void main(@NotNull String[] args) {
+    public static void main(String[] args) {
         score(args[0], args[1], args[2], args[3]);
     }
 
-    static int score(@NotNull String nomination, String d1, String d2, String d3) {
+    static int score(String nomination, String d1, String d2, String d3) {
 
         List<Integer> params = new ArrayList<>();
         params.add(checkAndConvert(d1));
@@ -34,7 +33,7 @@ class MiniYahtzee {
         return score;
     }
 
-    private static int checkAndConvert(@NotNull String num) {
+    private static int checkAndConvert(String num) {
         if (!num.isEmpty())
             return Integer.parseInt(num);
         else {
