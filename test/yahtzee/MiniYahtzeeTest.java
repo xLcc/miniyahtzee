@@ -3,6 +3,7 @@ package yahtzee;
 import org.junit.Test;
 import yahtzee.MiniYahtzee;
 
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
@@ -79,4 +80,14 @@ public class MiniYahtzeeTest {
         int result = MiniYahtzee.score("threes", "2", "2", "2");
         assertThat(result, is(0));
     }
+
+//    @Test
+//    public void emptyInput() {
+//        try{
+//            MiniYahtzee.score("", "","","");
+//            fail("should have thrown exception");
+//        } catch (IllegalArgumentException e){
+//            assertThat(e.getMessage(), containsString("Empty inputs"));
+//        }
+//    }
 }
